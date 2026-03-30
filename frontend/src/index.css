@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-background: #ffffff;
+    --color-card: rgba(255, 255, 255, 0.8);
+    --color-border: rgba(0, 0, 0, 0.1);
+    --color-primary: #1f6feb;
+    --color-danger: #da3633;
+    --color-success: #2ea043;
+    --color-text-main: #1f2937;
+    /* text-gray-800 */
+    --color-text-muted: #6b7280;
+    /* text-gray-500 */
+
+    background-color: var(--color-background);
+    color: var(--color-text-main);
+  }
+
+  .dark {
+    --color-background: #0d1117;
+    --color-card: rgba(22, 27, 34, 0.6);
+    --color-border: rgba(255, 255, 255, 0.1);
+    --color-primary: #58a6ff;
+    --color-danger: #da3633;
+    --color-success: #2ea043;
+    --color-text-main: #f3f4f6;
+    /* text-gray-100 */
+    --color-text-muted: #9ca3af;
+    /* text-gray-400 */
+
+    background-color: var(--color-background);
+    color: var(--color-text-main);
+  }
+}
+
+@layer components {
+  .glass-container {
+    @apply bg-card backdrop-blur-md border border-border rounded-xl shadow-lg dark:shadow-glass;
+  }
+
+  .auth-input {
+    @apply w-full bg-transparent border border-border text-[var(--color-text-main)] px-4 py-3 rounded-lg transition-all focus:bg-background focus:border-primary focus:ring-4 focus:ring-blue-500/20 outline-none placeholder:text-[var(--color-text-muted)];
+  }
+
+  .btn-primary {
+    @apply w-full bg-gradient-to-br from-[#1f6feb] to-[#a371f7] text-white font-semibold py-3 px-4 rounded-lg transition-transform hover:-translate-y-0.5 shadow-lg shadow-[#a371f7]/20 flex justify-center items-center;
+  }
+}

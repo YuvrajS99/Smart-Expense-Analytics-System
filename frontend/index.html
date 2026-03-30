@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinTrack Pro Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-background text-gray-100 antialiased font-sans flex flex-col min-h-screen overflow-x-hidden relative">
+    
+    <!-- Animated background blobs -->
+    <div class="fixed top-[-100px] left-[-150px] w-[600px] h-[600px] bg-primary rounded-full blur-[120px] opacity-20 -z-10 animate-[blobMove_15s_infinite_alternate]"></div>
+    <div class="fixed bottom-[-100px] right-[-150px] w-[600px] h-[600px] bg-[#a371f7] rounded-full blur-[120px] opacity-20 -z-10 animate-[blobMove_20s_infinite_alternate-reverse]"></div>
+
+    <div id="root" class="min-h-screen w-full flex"></div>
+    
+    <script type="module" src="/src/main.jsx"></script>
+    
+    <style>
+      @keyframes blobMove {
+          0% { transform: translate(0, 0) scale(1); }
+          100% { transform: translate(50px, 50px) scale(1.1); }
+      }
+    </style>
+  </body>
+</html>
